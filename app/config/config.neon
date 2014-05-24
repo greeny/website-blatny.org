@@ -18,7 +18,7 @@ nette:
 
 	session:
 		expiration: 14 days
-		cookie.domain: .blatny.org
+		cookie_domain: .blatny.org
 
 
 services:
