@@ -1,0 +1,24 @@
+{block content}
+<div class="page-header">
+	<h1 n:inner-block="title">Blog</h1>
+	<a n:if="$user->isAllowed('article', 'compose')" n:href="compose"
+		class="btn btn-success pull-right btn-xs" data-tooltip title="Compose new article">
+		<span class="icon-plus"></span>
+	</a>
+</div>
+
+{if $user->isAllowed('article', 'edit')}
+	<h3>Not published articles</h3>
+	<ul>
+		{foreach $notPublished as $article}
+			<li><a n:href=":Blog:Article:edit, slug => $article->slug">{$article->title}</a></li>
+		{/foreach}
+	</ul>
+{/if}
+
+<h3>Newest articles</h3>
+<ul>
+	{foreach $articles as $article}
+		<li>{control article, $article}</li>
+	{/foreach}
+</ul>

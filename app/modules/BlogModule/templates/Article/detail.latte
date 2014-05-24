@@ -1,0 +1,23 @@
+{block content}
+<div class="page-header">
+	<h1 n:inner-block="title">{$article->title} &middot; Blog</h1>
+	<a n:if="$user->isAllowed('article', 'edit')" n:href="edit, slug => $article->slug"
+		class="btn btn-warning pull-right btn-xs" data-tooltip title="Edit this article">
+		<span class="icon-pencil"></span>
+	</a>
+</div>
+
+<ul class="pager">
+	{if $next}
+		<li class="previous">{control article:next, $next}</li>
+	{else}
+		<li class="previous disabled"><a href="#"><span class="icon-chevron-left"></span> No next article</a></li>
+	{/if}
+	{if $previous}
+		<li class="next">{control article:previous, $previous}</li>
+	{else}
+		<li class="next disabled"><a href="#">No previous article <span class="icon-chevron-right"></span></a></li>
+	{/if}
+</ul>
+
+{!$article->content}
