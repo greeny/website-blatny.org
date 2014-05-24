@@ -9,7 +9,6 @@ parameters:
 php:
 	date.timezone: Europe/Prague
 	# zlib.output_compression: yes
-	session.name: "blatny.org"
 
 nette:
 	application:
@@ -19,6 +18,7 @@ nette:
 
 	session:
 		expiration: 14 days
+		cookie.domain: .blatny.org
 
 
 services:
