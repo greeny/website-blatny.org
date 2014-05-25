@@ -17,8 +17,10 @@
 {/if}
 
 <h3>Newest articles</h3>
-<ul>
+<ul class="blog">
+	<li></li>
 	{foreach $articles as $article}
 		<li>{control article, $article}</li>
 	{/foreach}
+	<li></li>
 </ul>

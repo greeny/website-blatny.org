@@ -35,6 +35,17 @@ class RouterFactory
 			'action' => 'detail',
 			'slug' => NULL,
 		));
+		$router[] = new Route('projects/new', array(
+			'module' => 'Projects',
+			'presenter' => 'Project',
+			'action' => 'new',
+		));
+		$router[] = new Route('projects/<slug>[/<action>[/<id>]]', array(
+			'module' => 'Projects',
+			'presenter' => 'Project',
+			'action' => 'detail',
+			'slug' => NULL,
+		));
 		$router[] = new Route('<module>/<presenter>/<action>[/<id>]', array(
 			'module' => 'Public',
 			'presenter' => 'Dashboard',
@@ -53,6 +64,17 @@ class RouterFactory
 		$router[] = new Route('//blog.blatny.org/<slug>[/<action>]', array(
 			'module' => 'Blog',
 			'presenter' => 'Article',
+			'action' => 'detail',
+			'slug' => NULL,
+		));
+		$router[] = new Route('//projects.blatny.org/new', array(
+			'module' => 'Projects',
+			'presenter' => 'Project',
+			'action' => 'new',
+		));
+		$router[] = new Route('//projects.blatny.org/<slug>[/<action>[/<id>]]', array(
+			'module' => 'Projects',
+			'presenter' => 'Project',
 			'action' => 'detail',
 			'slug' => NULL,
 		));

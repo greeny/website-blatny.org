@@ -1,10 +1,29 @@
 {block content}
 <div class="jumbotron">
-	<h1>Presentation of <a href="https://twitter.com/TomasBlatny" target="_blank"><span class="icon-twitter"></span>TomasBlatny</a></h1>
-	<p>
-		I am Czech programmer and website developer. I know languages like PHP, JavaScript, HTML and CSS,
-		C / C++, C#, Java, etc. I have created this website to introduce myself and also to give you some informations
-		about my projects.
-	</p>
-	<a class="btn btn-success" n:href=":Blog:Article:detail">Go to my blog <span class="icon-chevron-right"></span></a>
+	<div class="container">
+		<h1>Presentation of Tomáš Blatný</h1>
+		<p class="contacts">
+			<a class="btn" href="https://facebook.com/greencar.tomas" target="_blank">
+				<span class="icon-facebook-sign icon-fixed-width"></span><span class="text"> Facebook</span>
+			</a>
+			<a class="btn" href="https://twitter.com/TomasBlatny" target="_blank">
+				<span class="icon-twitter icon-fixed-width"></span><span class="text"> Twitter</span>
+			</a>
+			<a class="btn" href="https://github.com/greeny" target="_blank">
+				<span class="icon-github icon-fixed-width"></span><span class="text"> Github</span>
+			</a>
+			<a class="btn" href="mailto:blatny.tomas&#64;seznam.cz" target="_blank">
+				<span class="icon-fixed-width">@</span><span class="text"> E-mail</span>
+			</a>
+		</p>
+		<p>
+			I am Czech programmer and website developer. I know languages like PHP, JavaScript, HTML and CSS,
+			C / C++, C#, Java, etc.<br>I have created this website to introduce myself and also to give you some informations
+			about my projects.
+		</p>
+		<div class="pages">
+			<a class="btn" n:href=":Blog:Article:detail">Blog</a>
+			<a class="btn" n:href=":Projects:Project:detail">Projects</a>
+		</div>
+	</div>
 </div>

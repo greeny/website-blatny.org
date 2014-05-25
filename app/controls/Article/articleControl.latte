@@ -1,3 +1,4 @@
-<a href="{plink :Blog:Article:detail, slug => $article->slug}" data-tooltip title="{$article->content|truncate:50}">
-	{$article->title}
+<a href="{plink :Blog:Article:detail, slug => $article->slug}">
+	<span class="article-date">{$article->time|date:"j.n."}</span>
+	<span class="article-title">{$article->title}</span>
 </a>

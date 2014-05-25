@@ -20,8 +20,8 @@ class Form extends NForm {
 		$renderer->wrappers['controls']['container'] = NULL;
 		$renderer->wrappers['pair']['container'] = 'div class=form-group';
 		$renderer->wrappers['pair']['.error'] = 'has-error';
-		$renderer->wrappers['control']['container'] = 'div class=col-sm-9';
-		$renderer->wrappers['label']['container'] = 'div class="col-sm-3 control-label"';
+		$renderer->wrappers['control']['container'] = 'div class=form-control-group';
+		$renderer->wrappers['label']['container'] = 'div class="form-label"';
 		$renderer->wrappers['control']['description'] = 'span class=help-block';
 		$renderer->wrappers['control']['errorcontainer'] = 'span class=help-block';
 
