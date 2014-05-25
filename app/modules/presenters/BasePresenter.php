@@ -2,7 +2,8 @@
 
 namespace greeny\Website;
 
-use greeny\Website\Controls\Article\ArticleControl;
+use greeny\Website\Controls\ArticleControl;
+use greeny\Website\Controls\ProjectControl;
 use greeny\Website\Controls\UserControl;
 use greeny\Website\Templating\Helpers;
 use greeny\Website\Controls\Form;
@@ -66,5 +67,10 @@ abstract class BasePresenter extends Presenter
 	public function createComponentArticle()
 	{
 		return new ArticleControl();
+	}
+
+	public function createComponentProject()
+	{
+		return new ProjectControl();
 	}
 }

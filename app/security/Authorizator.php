@@ -18,6 +18,7 @@ class Authorizator extends Permission {
 		$this->addRole('owner', 'admin');
 
 		$this->addResource('article');
+		$this->addResource('project');
 
 		$this->allow('owner');
 	}

@@ -1,0 +1,30 @@
+<div class="project">
+	<a href="{plink :Projects:Project:detail slug => $project->slug}">
+		<div class="project-inner">
+			<div class="project-name">{$project->name}</div>
+			<div class="project-description">{$project->description}</div>
+		</div>
+	</a>
+	<div class="project-panel">
+		<div n:if="$project->github" class="panel-icon">
+			<a href="{$project->github}" data-tooltip title="View GitHub repository" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</div>
+		<div n:if="$project->composer" class="panel-icon">
+			<a href="{$project->composer}" data-tooltip title="View packagist repository." target="_blank">
+				<span class="icon-question"></span>
+			</a>
+		</div>
+		<div n:if="$project->documentation" class="panel-icon">
+			<a href="{$project->documentation}" data-tooltip title="View online documentation." target="_blank">
+				<span class="icon-book"></span>
+			</a>
+		</div>
+		<div n:if="$project->live" class="panel-icon">
+			<a href="{$project->live}" data-tooltip title="View live demo.">
+				<span class="icon-eye-open"></span>
+			</a>
+		</div>
+	</div>
+</div>

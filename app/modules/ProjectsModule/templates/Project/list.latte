@@ -1,0 +1,15 @@
+{block content}
+<div class="page-header">
+	<h1 n:inner-block="title">Projects</h1>
+	<!--<a n:if="$user->isAllowed('project', 'compose')" n:href="compose"
+		class="btn btn-success pull-right btn-xs" data-tooltip title="Compose new project">
+		<span class="icon-plus"></span>
+	</a>-->
+</div>
+
+<div class="projects-outer">
+	{foreach $projects as $project}
+		{control project, $project}
+	{/foreach}
+</div>
+

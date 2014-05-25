@@ -10,13 +10,7 @@
 
 	<link rel="stylesheet" href="{$basePath}/css/normalize.css">
 	<link rel="stylesheet" href="{$basePath}/css/style.css">
-
-
-	<!--<link rel="stylesheet" href="{$basePath}/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{$basePath}/css/bootstrap-theme.min.css">-->
 	<link rel="stylesheet" href="{$basePath}/css/font-awesome.css">
-	<!--<link rel="stylesheet" href="{$basePath}/css/php-highlighter.css">-->
-	<!--<link rel="stylesheet" href="{$basePath}/css/common.css">-->
 	{block head}{/block}
 </head>
 
@@ -56,12 +50,6 @@
 	</nav>
 
 	<div class="container">
-		<!--<ul class="action-panel">
-			<li><a href="#"><span class="icon-pencil" data-tooltip title="edit"></span></a></li>
-			<li><a href="#"><span class="icon-pencil" data-tooltip title="edit"></span></a></li>
-			<li><a href="#"><span class="icon-pencil" data-tooltip title="edit"></span></a></li>
-			<li class="toggle"><a href="#"><span class="icon-cogs"></span></a></li>
-		</ul>-->
 		<div n:if="count($flashes)" class="flashes">
 			<div n:foreach="$flashes as $flash" class="alert alert-{$flash->type} fade in">
 				<button class="close" data-dismiss="alert">&times;</button>

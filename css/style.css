@@ -141,7 +141,7 @@ a:hover {
 div.page-header h1 {
 	text-align: center;
 	padding-bottom: 3px;
-	border-bottom: 2px solid #82005b;
+	border-bottom: 2px solid #02576b;
 }
 
 div.jumbotron {
@@ -349,7 +349,6 @@ a.btn {
 	vertical-align: middle;
 	cursor: pointer;
 	background: linear-gradient(#bf7226, #ac5500);
-	background-color: #bf7226;
 	border: 1px solid #ccc;
 	white-space: nowrap;
 	padding: 6px 12px;
@@ -500,4 +499,82 @@ ul.pager li.disabled:hover {
 
 ul.pager li.disabled:hover a {
 	color: #aaa;
+}
+
+/* Projects */
+
+div.projects-outer {
+	text-align: center;
+}
+
+div.project {
+	display: inline-block;
+	position: relative;
+	margin: 8px;
+	height: 200px;
+	width: 300px;
+	border: 3px solid #ac5500;
+	background: linear-gradient(#bf7226, #ac5500);
+	color: white;
+}
+
+div.project:hover {
+	background: linear-gradient(#ac5500, #bf7226);
+}
+
+div.project div.project-inner,
+div.project div.project-panel {
+	position: absolute;
+	text-align: center;
+	color: #ffffff;
+}
+
+div.project div.project-inner {
+	height: 200px;
+	width: 300px;
+}
+
+div.project:hover div.project-inner {
+	text-shadow: 0 0 10px #eee;
+}
+
+div.project div.project-inner div.project-name {
+	padding: 30px 5px;
+	text-align: center;
+	font-size: 50px;
+}
+
+div.project div.project-panel {
+	padding: 5px;
+	bottom: -3px;
+	left: -3px;
+	right: -3px;
+	height: 0;
+	background-color: transparent;
+	color: transparent;
+	transition: height 0.2s;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	-o-transition: height 0.2s;
+}
+
+div.project:hover div.project-panel {
+	height: 50px;
+	background-color: #333333;
+	color: white;
+}
+
+div.project div.project-panel div.panel-icon {
+	padding: 10px;
+	display: inline-block;
+}
+
+div.project div.project-panel div.panel-icon a {
+	font-size: 25px;
+	color: transparent;
+}
+
+div.project:hover div.project-panel div.panel-icon a {
+	color: white;
+	text-decoration: none;
 }

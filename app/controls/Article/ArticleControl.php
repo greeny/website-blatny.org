@@ -3,7 +3,7 @@
  * @author Tomáš Blatný
  */
 
-namespace greeny\Website\Controls\Article;
+namespace greeny\Website\Controls;
 
 use greeny\Website\Model\Article;
 use Nette\Application\UI\Control;

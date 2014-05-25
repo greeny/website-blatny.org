@@ -27,6 +27,7 @@ services:
 	- LeanMapper\DefaultEntityFactory
 
 	- greeny\Website\Model\ArticleRepository
+	- greeny\Website\Model\ProjectRepository
 	- greeny\Website\Model\UserRepository
 
 	- greeny\Website\Security\Authenticator
