@@ -426,7 +426,7 @@ ul.blog li:hover a:before {
 }
 
 ul.blog li:hover {
-	background: linear-gradient(#ffffff, #f18c28, #f18316, #ffffff);
+	/*background: linear-gradient(#ffffff, #f18c28, #f18316, #ffffff);*/
 }
 
 ul.blog li:first-child:hover,
