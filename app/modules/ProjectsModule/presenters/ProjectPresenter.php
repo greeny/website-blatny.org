@@ -12,9 +12,6 @@ use Nette\Utils\Strings;
 
 class ProjectPresenter extends BaseProjectsPresenter
 {
-	/** @var ProjectRepository @inject */
-	public $projectRepository;
-
 	/** @var Project */
 	protected $project;
 

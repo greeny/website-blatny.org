@@ -23,9 +23,33 @@
 			<ul class="nav">
 				<li n:class="$presenter->isLinkCurrent(':Blog:Article:*') ? active">
 					<a n:href=":Blog:Article:detail">Blog</a>
+
+					<div class="navbar-panel">
+						<div class="container">
+							<ul class="panel-nav">
+								{foreach $panelArticles as $panelArticle}
+									<li n:class="$presenter->isLinkCurrent(':Blog:Article:detail', array('slug' => $panelArticle->slug)) ? active">
+										<a n:href=":Blog:Article:detail, slug => $panelArticle->slug">{$panelArticle->title}</a>
+									</li>
+								{/foreach}
+							</ul>
+						</div>
+					</div>
 				</li>
 				<li n:class="$presenter->isLinkCurrent(':Projects:Project:*') ? active">
 					<a n:href=":Projects:Project:detail">Projects</a>
+
+					<div class="navbar-panel">
+						<div class="container">
+							<ul class="panel-nav">
+								{foreach $panelProjects as $panelProject}
+									<li n:class="$presenter->isLinkCurrent(':Projects:Project:detail', array('slug' => $panelProject->slug)) ? active">
+										<a n:href=":Projects:Project:detail, slug => $panelProject->slug">{$panelProject->name}</a>
+									</li>
+								{/foreach}
+							</ul>
+						</div>
+					</div>
 				</li>
 			</ul>
 
@@ -48,6 +72,7 @@
 			</ul>
 		</div>
 	</nav>
+
 
 	<div class="container">
 		<div n:if="count($flashes)" class="flashes">

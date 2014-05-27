@@ -15,4 +15,14 @@ class ProjectRepository extends BaseRepository
 			->fetch();
 		return $row ? $this->createEntity($row) : NULL;
 	}
+
+	public function getPanelProjects()
+	{
+		return $this->createEntities(
+			$this->connection->select('*')
+				->from($this->getTable())
+				->limit(10)
+				->fetchAll()
+		);
+	}
 }

@@ -284,6 +284,43 @@ div.jumbotron div.pages a.btn:hover {
 	text-shadow: 0 0 5px #eee;
 }
 
+.navbar-panel {
+	position: fixed;
+	top: 60px;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	height: 0;
+	background-color: #333333;
+	transition: height 0.2s;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	-o-transition: height 0.2s;
+	overflow: hidden;
+}
+
+.navbar ul.nav li:hover .navbar-panel {
+	height: 60px;
+}
+
+.navbar ul.nav li .navbar-panel ul.panel-nav {
+	padding: 0;
+}
+
+.navbar ul.nav li .navbar-panel ul.panel-nav li a {
+	text-shadow: none;
+	font-size: 14px;
+}
+
+.navbar ul.nav li .navbar-panel ul.panel-nav li:hover,
+.navbar ul.nav li .navbar-panel ul.panel-nav li.active {
+	border: none;
+}
+
+.navbar ul.nav li .navbar-panel ul.panel-nav li a:hover {
+	text-shadow: 0 0 5px #eee;
+}
+
 /* forms */
 
 .form-group {

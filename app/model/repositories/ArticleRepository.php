@@ -59,4 +59,16 @@ class ArticleRepository extends BaseRepository
 			->fetch();
 		return $row ? $this->createEntity($row) : NULL;
 	}
+
+	public function getPanelArticles()
+	{
+		return $this->createEntities(
+			$this->connection->select('*')
+				->from($this->getTable())
+				->where('[published] = %b', TRUE)
+				->orderBy('[time] DESC')
+				->limit(10)
+				->fetchAll()
+		);
+	}
 }

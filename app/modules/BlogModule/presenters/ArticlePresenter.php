@@ -13,9 +13,6 @@ use Nette\Utils\Strings;
 
 class ArticlePresenter extends BaseBlogPresenter
 {
-	/** @var ArticleRepository @inject */
-	public $articleRepository;
-
 	/** @var UserRepository @inject */
 	public $userRepository;
 

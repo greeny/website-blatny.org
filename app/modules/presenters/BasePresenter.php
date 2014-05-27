@@ -5,12 +5,20 @@ namespace greeny\Website;
 use greeny\Website\Controls\ArticleControl;
 use greeny\Website\Controls\ProjectControl;
 use greeny\Website\Controls\UserControl;
+use greeny\Website\Model\ArticleRepository;
+use greeny\Website\Model\ProjectRepository;
 use greeny\Website\Templating\Helpers;
 use greeny\Website\Controls\Form;
 use Nette\Application\UI\Presenter;
 
 abstract class BasePresenter extends Presenter
 {
+	/** @var ArticleRepository @inject */
+	public $articleRepository;
+
+	/** @var ProjectRepository @inject */
+	public $projectRepository;
+
 	public function createForm()
 	{
 		$form = new Form();
@@ -21,6 +29,8 @@ abstract class BasePresenter extends Presenter
 	{
 		parent::beforeRender();
 		Helpers::prepareTemplate($this->template);
+		$this->template->panelProjects = $this->projectRepository->getPanelProjects();
+		$this->template->panelArticles = $this->articleRepository->getPanelArticles();
 	}
 
 	public function getParamByName($name)
