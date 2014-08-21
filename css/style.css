@@ -314,7 +314,7 @@ div.jumbotron div.pages a.btn:hover {
 
 .navbar ul.nav li .navbar-panel ul.panel-nav li:hover,
 .navbar ul.nav li .navbar-panel ul.panel-nav li.active {
-	border: none;
+	border: inherit;
 }
 
 .navbar ul.nav li .navbar-panel ul.panel-nav li a:hover {
