@@ -56,29 +56,29 @@ class RouterFactory
 
 	protected function createProductionRouter($router)
 	{
-		$router[] = new Route('//blog.blatny.org/compose', array(
+		$router[] = new Route('//blog.%domain%/compose', array(
 			'module' => 'Blog',
 			'presenter' => 'Article',
 			'action' => 'compose',
 		));
-		$router[] = new Route('//blog.blatny.org/<slug>[/<action>]', array(
+		$router[] = new Route('//blog.%domain%/<slug>[/<action>]', array(
 			'module' => 'Blog',
 			'presenter' => 'Article',
 			'action' => 'detail',
 			'slug' => NULL,
 		));
-		$router[] = new Route('//projects.blatny.org/new', array(
+		$router[] = new Route('//projects.%domain%/new', array(
 			'module' => 'Projects',
 			'presenter' => 'Project',
 			'action' => 'new',
 		));
-		$router[] = new Route('//projects.blatny.org/<slug>[/<action>[/<id>]]', array(
+		$router[] = new Route('//projects.%domain%/<slug>[/<action>[/<id>]]', array(
 			'module' => 'Projects',
 			'presenter' => 'Project',
 			'action' => 'detail',
 			'slug' => NULL,
 		));
-		$router[] = new Route('//[<module>.]blatny.org/<presenter>/<action>[/<id>]', array(
+		$router[] = new Route('//[<module>.]%domain%/<presenter>/<action>[/<id>]', array(
 			'module' => 'Public',
 			'presenter' => 'Dashboard',
 			'action' => 'default',
