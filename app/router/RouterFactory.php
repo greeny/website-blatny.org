@@ -56,33 +56,33 @@ class RouterFactory
 
 	protected function createProductionRouter($router)
 	{
-		$router[] = new Route('//blog.%domain%/compose', array(
+		$router[] = new Route('blog/compose', array(
 			'module' => 'Blog',
 			'presenter' => 'Article',
 			'action' => 'compose',
-		));
-		$router[] = new Route('//blog.%domain%/<slug>[/<action>]', array(
+		), Route::SECURED);
+		$router[] = new Route('blog/<slug>[/<action>]', array(
 			'module' => 'Blog',
 			'presenter' => 'Article',
 			'action' => 'detail',
 			'slug' => NULL,
-		));
-		$router[] = new Route('//projects.%domain%/new', array(
+		), Route::SECURED);
+		$router[] = new Route('projects/new', array(
 			'module' => 'Projects',
 			'presenter' => 'Project',
 			'action' => 'new',
-		));
-		$router[] = new Route('//projects.%domain%/<slug>[/<action>[/<id>]]', array(
+		), Route::SECURED);
+		$router[] = new Route('projects/<slug>[/<action>[/<id>]]', array(
 			'module' => 'Projects',
 			'presenter' => 'Project',
 			'action' => 'detail',
 			'slug' => NULL,
-		));
-		$router[] = new Route('//[<module>.]%domain%/<presenter>/<action>[/<id>]', array(
+		), Route::SECURED);
+		$router[] = new Route('<module>/<presenter>/<action>[/<id>]', array(
 			'module' => 'Public',
 			'presenter' => 'Dashboard',
 			'action' => 'default',
-		));
+		), Route::SECURED);
 		return $router;
 	}
 }
